@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PetCare — Gestão de Pet Shop (Protótipo)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" fill="var(--primary)"></circle>
+          <path d="M20 38c0-6 6-10 12-10s12 4 12 10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+          <circle cx="26" cy="26" r="3" fill="#fff"></circle>
+          <circle cx="38" cy="26" r="3" fill="#fff"></circle>
+        </svg>
+        <div class="brand-text">
+          <h1>PetCare</h1>
+          <small>Gestão de Pet Shop</small>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#clientes">Clientes</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#agenda" class="btn-primary">Agendar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h2>Organize seu Pet Shop com simplicidade</h2>
+          <p>Cadastro de clientes e pets, controle de estoque, agendamento de serviços e controle financeiro — tudo em uma interface intuitiva.</p>
+          <div class="cta-row">
+            <a href="#produtos" class="btn-primary">Ver produtos</a>
+            <a href="#clientes" class="btn-ghost">Cadastrar cliente</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <form id="quick-register" class="card">
+            <h3>Cadastro rápido de cliente</h3>
+            <label>Nome<input type="text" id="nome" placeholder="Nome completo"></label>
+            <label>CPF<input type="text" id="cpf" placeholder="00000000000"></label>
+            <label>Telefone<input type="text" id="telefone" placeholder="(31) 9xxxx-xxxx"></label>
+            <div class="form-row">
+              <button type="submit" class="btn-primary full">Salvar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="clientes" class="container section">
+      <header class="section-header">
+        <h3>Clientes e Pets</h3>
+        <p class="muted">Busque, cadastre e gerencie tutores e seus pets.</p>
+      </header>
+      <div class="cards-grid" id="clientes-list">
+        <!-- exemplo de card -->
+      </div>
+    </section>
+
+    <section id="produtos" class="container section alt">
+      <header class="section-header">
+        <h3>Produtos</h3>
+        <p class="muted">Controle de estoque e vendas.</p>
+      </header>
+      <div class="cards-grid" id="produtos-list">
+      </div>
+    </section>
+
+    <section id="servicos" class="container section">
+      <header class="section-header">
+        <h3>Serviços e Agenda</h3>
+        <p class="muted">Agende banho, tosa e consultas de forma visual.</p>
+      </header>
+      <div class="grid-2">
+        <div class="card">
+          <h4>Próximos agendamentos</h4>
+          <ul id="agenda-list" class="list-compact"></ul>
+        </div>
+        <div class="card">
+          <h4>Novo agendamento</h4>
+          <form id="agendamento-form">
+            <label>Pet<input type="text" id="ag-pet" placeholder="Nome do pet"></label>
+            <label>Serviço
+              <select id="ag-servico">
+                <option>Banho</option>
+                <option>Tosa</option>
+                <option>Consulta</option>
+              </select>
+            </label>
+            <label>Data<input type="date" id="ag-data"></label>
+            <label>Profissional<input type="text" id="ag-pro" placeholder="Nome do profissional"></label>
+            <button class="btn-primary full" type="submit">Agendar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© 2025 PetCare</div>
+        <div class="muted">Contato: contato@petcare.com.br • (31) 99999-9999</div>
+      </div>
+    </footer>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
